@@ -18,13 +18,20 @@
 
 ## 📌 Overview
 
-Multi-mode port scanning, service fingerprinting,
+
+OSpecter is an advanced tactical port scanner offering multiple scan modes, service fingerprinting, OS detection and curated CVE hints. It supports SYN/Connect/UDP/NULL/FIN/XMAS scans, banner grabbing, SSL/TLS auditing, WAF/CDN detection and network sweeps, all with a fully threaded engine. Results can be exported to dark-themed HTML, JSON and CSV reports, and two scans can be diffed for delta ports.
 
 ---
 
 ## ✨ Features
 
-- Tactical Port Scanner with Service Fingerprinting, CVE Hints & Risk Scoring
+
+- Scan modes: SYN (stealth), Connect, UDP, NULL, FIN and XMAS, fully threaded with adaptive concurrency
+- OS detection via TTL heuristics and TCP window fingerprinting, plus protocol-aware banner grabbing
+- SSL/TLS audit (cert expiry, weak ciphers, protocol versions) and WAF/CDN detection from HTTP headers
+- CVE hints for 70+ services and a weighted risk score across open ports and dangerous services
+- Network sweep (ICMP/ARP, CIDR), traceroute via Scapy, scripted probes and MAC OUI vendor lookup
+- Scan diff of two JSON reports and export to HTML, JSON and CSV
 
 ---
 
@@ -37,8 +44,10 @@ Multi-mode port scanning, service fingerprinting,
 
 ## 🚀 Usage
 
+
 ```bash
 ./OSpecter
+./OSpecter --help
 ```
 
 ---
